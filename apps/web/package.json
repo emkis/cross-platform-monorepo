@@ -1,0 +1,13 @@
+{
+  "name": "@cross/web",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "./src",
+  "scripts": {
+    "start": "tsx ./src/main.ts"
+  },
+  "dependencies": {
+    "@cross/core": "workspace:*",
+    "@cross/permissions": "workspace:*"
+  }
+}
