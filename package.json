@@ -3,12 +3,20 @@
   "license": "MIT",
   "name": "ts-cross-platform",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "start": "pnpm --filter @cross/* start",
+    "start:web": "pnpm --filter @cross/web start",
+    "start:native": "pnpm --filter @cross/native start"
+  },
   "engines": {
     "node": ">=18.14.0",
     "pnpm": ">=8.12.1"
   },
   "devDependencies": {
-    "typescript": "^5.3.3"
+    "@types/node": "^20.10.4",
+    "esbuild": "^0.19.9",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
   }
 }

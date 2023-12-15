@@ -1,0 +1,8 @@
+{
+  "extends": "@cross/config/tsconfig",
+  "include": ["./src"],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "moduleSuffixes": [".native", ""]
+  }
+}
