@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "license": "MIT",
   "main": "./src",
-  "react-native": "src/index.native.ts",
   "scripts": {},
   "dependencies": {
     "@cross/config": "workspace:*"

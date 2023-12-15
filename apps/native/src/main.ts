@@ -1,9 +1,4 @@
 import { createLogger, createEventEmitter, paymentsApi } from "@cross/core";
-// import {
-//   createEventEmitter,
-//   createLogger,
-//   paymentsApi,
-// } from "@cross/core/src/index.native";
 
 type ApplicationEvents = {
   "app:initialized": null;
