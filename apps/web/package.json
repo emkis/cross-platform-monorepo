@@ -4,9 +4,10 @@
   "license": "MIT",
   "main": "./src",
   "scripts": {
-    "start": "tsx ./src/main.ts"
+    "start": "tsx --no-cache --tsconfig ./tsconfig.json ./src/main.ts"
   },
   "dependencies": {
+    "@cross/config": "workspace:*",
     "@cross/core": "workspace:*",
     "@cross/permissions": "workspace:*"
   }
