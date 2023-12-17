@@ -1,4 +1,4 @@
-import { createLogger, createEventEmitter, paymentsApi } from "@cross/core";
+import { createLogger, createEventEmitter, paymentsApi, ordersApi } from "@cross/core";
 
 type ApplicationEvents = {
   "app:initialized": null;
@@ -11,9 +11,14 @@ const eventEmitter = createEventEmitter<ApplicationEvents>();
 eventEmitter.on("app:initialized", () => {
   logger.log("[native] Application is initialising...");
   logger.log("==========================================");
-  logger.log("[native] Payment API URLs:");
+
+  logger.log("[native] Payments API URLs:");
   logger.log(`[native] - ${paymentsApi.getPayments()}`);
   logger.log(`[native] - ${paymentsApi.getPayment(":id")}`);
+
+  console.info("[web] Orders API URLs:");
+  console.info(`[web] - ${ordersApi.getOrders()}`);
+  console.info(`[web] - ${ordersApi.getOrder(":id")}`);
 });
 
 eventEmitter.on("app:destroyed", () => {
