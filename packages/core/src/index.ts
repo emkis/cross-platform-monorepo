@@ -6,4 +6,3 @@
 
 export * from "./event-emitter";
 export * from "./apis";
-export * from "./logger";
