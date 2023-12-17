@@ -10,6 +10,7 @@
   "dependencies": {
     "@cross/config": "workspace:*",
     "@cross/core": "workspace:*",
-    "@cross/permissions": "workspace:*"
+    "@cross/permissions": "workspace:*",
+    "@cross/payments": "workspace:*"
   }
 }

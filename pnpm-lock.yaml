@@ -23,6 +23,9 @@ importers:
       '@cross/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@cross/payments':
+        specifier: workspace:*
+        version: link:../../packages/payments
       '@cross/permissions':
         specifier: workspace:*
         version: link:../../packages/permissions
@@ -35,6 +38,9 @@ importers:
       '@cross/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@cross/payments':
+        specifier: workspace:*
+        version: link:../../packages/payments
       '@cross/permissions':
         specifier: workspace:*
         version: link:../../packages/permissions
