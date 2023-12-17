@@ -1,24 +1,23 @@
-import { createLogger, createEventEmitter, paymentsApi } from "@cross/core";
+import { createEventEmitter, paymentsApi } from "@cross/core";
 
 type ApplicationEvents = {
   "app:initialized": null;
   "app:destroyed": null;
 };
 
-const logger = createLogger({ debug: true });
 const eventEmitter = createEventEmitter<ApplicationEvents>();
 
 eventEmitter.on("app:initialized", () => {
-  logger.log("[web] Application is initialising...");
-  logger.log("==========================================");
-  logger.log("[web] Payment API URLs:");
-  logger.log(`[web] - ${paymentsApi.getPayments()}`);
-  logger.log(`[web] - ${paymentsApi.getPayment(":id")}`);
+  console.info("[web] Application is initialising...");
+  console.info("==========================================");
+  console.info("[web] Payment API URLs:");
+  console.info(`[web] - ${paymentsApi.getPayments()}`);
+  console.info(`[web] - ${paymentsApi.getPayment(":id")}`);
 });
 
 eventEmitter.on("app:destroyed", () => {
-  logger.log("==========================================");
-  logger.log("[web] Application is being destroyed...");
+  console.info("==========================================");
+  console.info("[web] Application is being destroyed...");
 });
 
 eventEmitter.emit("app:initialized", null);
