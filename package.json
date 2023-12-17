@@ -1,7 +1,9 @@
 {
-  "author": "emkis",
+  "author": {
+    "name": "Nicolas Jardim",
+    "email": "nicolasemkis@gmail.com"
+  },
   "license": "MIT",
-  "name": "ts-cross-platform",
   "version": "1.0.0",
   "scripts": {
     "start": "pnpm --filter @cross/* start",
