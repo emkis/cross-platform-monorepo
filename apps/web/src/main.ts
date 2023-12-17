@@ -1,4 +1,5 @@
 import { createEventEmitter, paymentsApi, ordersApi } from "@cross/core";
+import { fetchAllPayments } from "@cross/payments/web";
 
 type ApplicationEvents = {
   "app:initialized": null;
@@ -18,6 +19,8 @@ eventEmitter.on("app:initialized", () => {
   console.info("[web] Orders API URLs:");
   console.info(`[web] - ${ordersApi.getOrders()}`);
   console.info(`[web] - ${ordersApi.getOrder(":id")}`);
+
+  fetchAllPayments();
 });
 
 eventEmitter.on("app:destroyed", () => {

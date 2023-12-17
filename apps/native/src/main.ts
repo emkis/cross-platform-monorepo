@@ -1,4 +1,5 @@
 import { createLogger, createEventEmitter, paymentsApi, ordersApi } from "@cross/core";
+import { fetchAllPayments } from '@cross/payments/native';
 
 type ApplicationEvents = {
   "app:initialized": null;
@@ -19,6 +20,8 @@ eventEmitter.on("app:initialized", () => {
   logger.log("Orders API URLs:");
   logger.log(`- ${ordersApi.getOrders()}`);
   logger.log(`- ${ordersApi.getOrder(":id")}`);
+
+  fetchAllPayments()
 });
 
 eventEmitter.on("app:destroyed", () => {
