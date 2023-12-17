@@ -2,9 +2,10 @@
   "name": "@cross/web",
   "version": "0.0.0",
   "license": "MIT",
-  "main": "./src",
   "scripts": {
-    "start": "tsx --no-cache --tsconfig ./tsconfig.json ./src/main.ts"
+    "clean": "rm -rf ./dist",
+    "build": "pnpm clean && esbuild --bundle ./src/main.ts --outfile=./dist/web.js",
+    "start": "pnpm build && node ./dist/web.js"
   },
   "dependencies": {
     "@cross/config": "workspace:*",
