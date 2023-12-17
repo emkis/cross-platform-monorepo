@@ -1,0 +1,15 @@
+{
+  "name": "@cross/payments",
+  "version": "0.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./shared/src/index.ts",
+    "./web": "./web/src/index.ts",
+    "./native": "./native/src/index.ts"
+  },
+  "scripts": {},
+  "dependencies": {
+    "@cross/config": "workspace:*",
+    "@cross/core": "workspace:*"
+  }
+}

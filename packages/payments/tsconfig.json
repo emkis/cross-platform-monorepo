@@ -1,0 +1,9 @@
+{
+  "extends": "@cross/config/tsconfig",
+  "include": ["./native", "./web"],
+  "compilerOptions": {
+    "paths": {
+      "@shared": ["./shared/src"]
+    }
+  }
+}
