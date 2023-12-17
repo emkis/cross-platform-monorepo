@@ -4,7 +4,7 @@
     "email": "nicolasemkis@gmail.com"
   },
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "scripts": {
     "start": "pnpm --filter @cross/* start",
     "start:web": "pnpm --filter @cross/web start",
