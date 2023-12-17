@@ -1,5 +1,5 @@
 import { paymentsApi } from "@cross/core";
-import { Payment } from "@shared";
+import type { Payment } from "@shared";
 
 export function fetchAllPayments(): Payment[] {
   // This would call the `/v2/payments` URL (web).

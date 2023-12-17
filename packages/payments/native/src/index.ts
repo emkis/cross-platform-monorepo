@@ -1,5 +1,5 @@
 import { paymentsApi, createLogger } from "@cross/core";
-import { Payment } from "@shared";
+import type { Payment } from "@shared";
 
 const logger = createLogger({ debug: true, preffix: "payments" });
 
