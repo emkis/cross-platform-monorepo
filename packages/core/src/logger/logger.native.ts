@@ -1,4 +1,5 @@
 export type LoggerOptions = {
+  preffix?: string;
   debug?: boolean;
   persist?: boolean;
 };
@@ -10,9 +11,10 @@ export type Logger = {
 
 export function createLogger(options: LoggerOptions = {}) {
   function log(message: string) {
+    const formattedMessage = options.preffix ? `[${options.preffix}] ${message}` : message;
     // Send this to Sentry or Datadog
-    debug(message);
-    persist(message);
+    debug(formattedMessage);
+    persist(formattedMessage);
   }
 
   function clearPersistedLogs() {
