@@ -6,9 +6,9 @@
   "license": "MIT",
   "version": "0.0.0",
   "scripts": {
-    "start": "pnpm --filter @cross/* start",
-    "start:web": "pnpm --filter @cross/web start",
-    "start:native": "pnpm --filter @cross/native start"
+    "start": "pnpm --filter '@cross/*' start",
+    "start:web": "pnpm --filter '@cross/web' start",
+    "start:native": "pnpm --filter '@cross/native' start"
   },
   "engines": {
     "node": ">=18.14.0",
