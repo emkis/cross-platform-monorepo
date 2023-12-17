@@ -5,25 +5,25 @@ type ApplicationEvents = {
   "app:destroyed": null;
 };
 
-const logger = createLogger({ debug: true, persist: true });
+const logger = createLogger({ debug: true, persist: true, preffix: "native" });
 const eventEmitter = createEventEmitter<ApplicationEvents>();
 
 eventEmitter.on("app:initialized", () => {
-  logger.log("[native] Application is initialising...");
+  logger.log("Application is initialising...");
   logger.log("==========================================");
 
-  logger.log("[native] Payments API URLs:");
-  logger.log(`[native] - ${paymentsApi.getPayments()}`);
-  logger.log(`[native] - ${paymentsApi.getPayment(":id")}`);
+  logger.log("Payments API URLs:");
+  logger.log(`- ${paymentsApi.getPayments()}`);
+  logger.log(`- ${paymentsApi.getPayment(":id")}`);
 
-  console.info("[web] Orders API URLs:");
-  console.info(`[web] - ${ordersApi.getOrders()}`);
-  console.info(`[web] - ${ordersApi.getOrder(":id")}`);
+  logger.log("Orders API URLs:");
+  logger.log(`- ${ordersApi.getOrders()}`);
+  logger.log(`- ${ordersApi.getOrder(":id")}`);
 });
 
 eventEmitter.on("app:destroyed", () => {
   logger.log("==========================================");
-  logger.log("[native] Application is being destroyed...");
+  logger.log("Application is being destroyed...");
 });
 
 eventEmitter.emit("app:initialized", null);
