@@ -1,9 +1,18 @@
+## Things to explain better
+
+- When to have an `.native.ts` file and when to have a `.ts` file.
+- Why inside a package we don't have the `moduleSuffixes` configuration we need
+  to have exports with explicit `.native.ts` suffixes.
+- How to structure a package that supports both platforms but depend on packages
+  that also have different entry points per platform.
+- Does the bundler includes things of `.native.ts` files on web?
+
 ## Monorepo structure
 
 ### Applications
 
 The applications in this monorepo are just simple examples to demonstrate how
-different applications inside a monorepo can target use the same internal packages
+different applications inside a monorepo can use the same internal packages
 but change have different behaviours based on the platforms they are targeting
 with the `moduleSuffixes` configuration.
 
@@ -48,6 +57,9 @@ This ensures no one would get confused about which platform this module supports
 and also allows the possibility of adding a `logger.ts` file in the future that
 would support the Web React platform too.
 
+The **apis** module..
+Explains that some files are both platforms and other not,
+
 This package has the `index.ts` and `index.native.ts`, this means we will export
 everything that is supported in Web React platform on the `index.ts` and
 everything that is supported in React Native platform on the `index.native.ts`,
@@ -56,6 +68,12 @@ based on their `tsconfig.json` configuration.
 
 We don't need the `tsconfig.json` to have the configuration for `moduleSuffixes`
 as we don't depend on a package that has these different files per platform.
+
+---
+
+#### @cross/payments
+
+...
 
 ---
 
