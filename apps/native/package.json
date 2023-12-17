@@ -2,10 +2,10 @@
   "name": "@cross/native",
   "version": "0.0.0",
   "license": "MIT",
-  "main": "./src",
   "scripts": {
-    "start": "tsx --no-cache --tsconfig ./tsconfig.json ./src/main.ts",
-    "build": "tsc --project . --noEmit"
+    "clean": "rm -rf ./dist",
+    "build": "pnpm clean && esbuild --bundle ./src/main.ts --resolve-extensions=.native.ts,.ts --outfile=./dist/native.js",
+    "start": "pnpm build && node ./dist/native.js"
   },
   "dependencies": {
     "@cross/config": "workspace:*",
