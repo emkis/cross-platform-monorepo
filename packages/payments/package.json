@@ -4,7 +4,7 @@
   "license": "MIT",
   "exports": {
     ".": "./index.ts",
-    "./native": "./native/index.ts"
+    "./native": "./index.native.ts"
   },
   "scripts": {},
   "dependencies": {
