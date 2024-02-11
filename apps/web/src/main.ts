@@ -1,5 +1,5 @@
 import { createEventEmitter, paymentsApi, ordersApi } from "@cross/core";
-import { fetchAllPayments } from "@cross/payments/web";
+import { fetchAllPayments } from "@cross/payments";
 
 type ApplicationEvents = {
   "app:initialized": null;
