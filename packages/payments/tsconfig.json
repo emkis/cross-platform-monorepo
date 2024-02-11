@@ -3,7 +3,7 @@
   "include": ["./native", "./web"],
   "compilerOptions": {
     "paths": {
-      "@shared": ["./shared/src"]
+      "@shared": ["./shared"]
     }
   }
 }
