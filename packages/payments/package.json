@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "exports": {
-    ".": "./index.ts",
-    "./native": "./index.native.ts"
+    ".": "./src/index.ts",
+    "./native": "./src/index.native.ts"
   },
   "scripts": {},
   "dependencies": {
