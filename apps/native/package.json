@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf ./dist",
-    "build": "pnpm clean && esbuild --bundle ./src/main.ts --resolve-extensions=.native.ts,.ts --outfile=./dist/native.js",
+    "build": "pnpm clean && esbuild --bundle ./src/main.ts --resolve-extensions=.native.tsx,.native.ts,.tsx,.ts,.jsx,.js,.css,.json --outfile=./dist/native.js",
     "start": "pnpm build && node ./dist/native.js"
   },
   "dependencies": {
