@@ -8,7 +8,8 @@
   "scripts": {
     "start": "pnpm --filter '@cross/*' start",
     "start:web": "pnpm --filter '@cross/web' start",
-    "start:native": "pnpm --filter '@cross/native' start"
+    "start:native": "pnpm --filter '@cross/native' start",
+    "clean": "pnpm --filter '@cross/*' clean"
   },
   "engines": {
     "node": ">=18.14.0",
