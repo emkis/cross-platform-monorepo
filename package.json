@@ -11,9 +11,10 @@
     "start:native": "pnpm --filter '@cross/native' start",
     "clean": "pnpm --filter '@cross/*' clean"
   },
+  "packageManager": "pnpm@9.1.0",
   "engines": {
     "node": ">=18.14.0",
-    "pnpm": ">=8.12.1"
+    "pnpm": ">=9.1.0"
   },
   "devDependencies": {
     "esbuild": "^0.20.0",
